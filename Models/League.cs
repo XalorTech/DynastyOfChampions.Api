@@ -3,8 +3,8 @@ namespace DynastyOfChampions.Api.Models
     public class League
     {
         public int Id { get; set; }
-        public string Name { get; set; }
-        public string Abbreviation { get; set; }
+        public required string Name { get; set; }
+        public required string Abbreviation { get; set; }
         
         #region Foreign Keys
 
@@ -14,7 +14,7 @@ namespace DynastyOfChampions.Api.Models
 
         #region Relational Objects & Collections
 
-        public Sport Sport { get; set; }
+        public required Sport Sport { get; set; }
 
         #endregion
     }
