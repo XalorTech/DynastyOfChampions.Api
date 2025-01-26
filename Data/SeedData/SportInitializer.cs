@@ -1,4 +1,5 @@
-﻿using DynastyOfChampions.Api.Models;
+﻿using DynastyOfChampions.Api.Data.Enums;
+using DynastyOfChampions.Api.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace DynastyOfChampions.Api.Data.SeedData
@@ -15,7 +16,7 @@ namespace DynastyOfChampions.Api.Data.SeedData
         public void Seed()
         {
             modelBuilder.Entity<Sport>().HasData(
-                new Sport() { Id = 1, Name = "Football" }
+                new Sport() { Id = (int)SportEnums.FOOTBALL, Name = "Football" }
             );
         }
     }

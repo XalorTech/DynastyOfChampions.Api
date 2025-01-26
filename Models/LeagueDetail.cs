@@ -1,0 +1,23 @@
+﻿namespace DynastyOfChampions.Api.Models
+{
+    public class LeagueDetail
+    {
+        public required int Id { get; set; }
+        public required string Name { get; set; }
+        public required string Abbreviation { get; set; }
+        public required DateOnly BeginDate { get; set; }
+        public DateOnly? EndDate { get; set; }
+
+        #region Foreign Keys
+
+        public required int LeagueId { get; set; }
+
+        #endregion
+
+        #region Relational Objects & Collections
+
+        public League? League { get; set; }
+
+        #endregion
+    }
+}

@@ -4,18 +4,11 @@
     {
         public required int Id { get; set; }
 
-        #region Foreign Keys
-
-        public int? LeagueId { get; set; }
-
-        #endregion
-
         #region Relational Objects & Collections
 
-        public League? League { get; set; }
         public ICollection<DivisionDetail>? DivisionDetails { get; set; }
-        public ConferenceDivisionRelationship? ConferenceDivisionRelationship { get; set; }
-        public ICollection<ConferenceDivisionRelationship>? ConferenceDivisionRelationships { get; set; }
+        public ICollection<Season>? Seasons { get; set; }
+        public ICollection<Conference>? Conferences { get; set; }
 
         #endregion
     }
